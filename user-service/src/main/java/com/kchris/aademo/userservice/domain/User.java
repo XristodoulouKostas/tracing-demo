@@ -1,4 +1,4 @@
-package com.kchris.aademo.userservice.controllers;
+package com.kchris.aademo.userservice.domain;
 
 import com.kchris.aademo.userservice.enums.UserStatus;
 import java.util.UUID;

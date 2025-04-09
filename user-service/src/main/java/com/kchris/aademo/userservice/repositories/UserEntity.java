@@ -1,6 +1,6 @@
 package com.kchris.aademo.userservice.repositories;
 
-import com.kchris.aademo.userservice.controllers.User;
+import com.kchris.aademo.userservice.domain.User;
 import com.kchris.aademo.userservice.enums.UserStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

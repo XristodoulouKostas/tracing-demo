@@ -1,6 +1,6 @@
 package com.kchris.aademo.userservice.services;
 
-import com.kchris.aademo.userservice.controllers.User;
+import com.kchris.aademo.userservice.domain.User;
 import com.kchris.aademo.userservice.repositories.UserEntity;
 import com.kchris.aademo.userservice.repositories.UserRepository;
 import java.util.Optional;

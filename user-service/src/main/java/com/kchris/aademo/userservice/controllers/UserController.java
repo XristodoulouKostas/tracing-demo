@@ -1,5 +1,6 @@
 package com.kchris.aademo.userservice.controllers;
 
+import com.kchris.aademo.userservice.domain.User;
 import com.kchris.aademo.userservice.services.UserService;
 import java.util.UUID;
 import org.springframework.http.MediaType;
