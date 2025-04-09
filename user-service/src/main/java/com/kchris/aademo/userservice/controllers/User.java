@@ -1,9 +1,10 @@
 package com.kchris.aademo.userservice.controllers;
 
 import com.kchris.aademo.userservice.enums.UserStatus;
+import java.util.UUID;
 
 public record User(
-    Object id,
+    UUID id,
     String name,
     UserStatus status
 ) {

@@ -1,0 +1,16 @@
+INSERT INTO users (id, name, status) VALUES
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120001', 'Alice', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120002', 'Bob', 'PENDING_CONFIRMATION'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120003', 'Charlie', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120004', 'Diana', 'ACCOUNT_FROZEN'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120005', 'Ethan', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120006', 'Fiona', 'ACCOUNT_FROZEN'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120007', 'George', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120008', 'Hannah', 'PENDING_CONFIRMATION'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac120009', 'Ian', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000a', 'Jane', 'ACCOUNT_FROZEN'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000b', 'Kevin', 'ACTIVE'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000c', 'Laura', 'ACCOUNT_FROZEN'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000d', 'Mike', 'PENDING_CONFIRMATION'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000e', 'Nina', 'PENDING_CONFIRMATION'),
+  ('a1b2c3d4-e5f6-11ec-8fea-0242ac12000f', 'Oscar', 'ACTIVE');
