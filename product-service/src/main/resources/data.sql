@@ -1,0 +1,16 @@
+INSERT INTO products (id, name, quantity) VALUES
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120001', 'Mouse', 150),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120002', 'Keyboard', 120),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120003', 'Monitor', 60),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120004', 'Laptop', 25),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120005', 'Desk', 40),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120006', 'Chair', 35),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120007', 'Headphones', 80),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120008', 'Webcam', 70),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac120009', 'Microphone', 55),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000a', 'Notebook', 180),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000b', 'Pen', 400),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000c', 'Tablet', 22),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000d', 'Smartphone', 90),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000e', 'USB Cable', 300),
+  ('f1e2d3c4-b5a6-11ec-9fea-0242ac12000f', 'Power Bank', 50);
