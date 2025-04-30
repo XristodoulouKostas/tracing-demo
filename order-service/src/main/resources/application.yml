@@ -4,3 +4,9 @@ server:
 spring:
   application:
     name: order-service
+
+external:
+  user-service:
+    url: ${USER_SERVICE_URL:http://localhost:8081}
+  product-service:
+    url: ${PRODUCT_SERVICE_URL:http://localhost:8082}

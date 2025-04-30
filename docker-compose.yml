@@ -1,0 +1,32 @@
+version: '3.9'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  user-service:
+    image: user-service:latest
+    build:
+      context: ./user-service
+    networks:
+      - backend
+
+  product-service:
+    image: product-service:latest
+    build:
+      context: ./product-service
+    networks:
+      - backend
+
+  order-service:
+    image: order-service:latest
+    build:
+      context: ./order-service
+    ports:
+      - "8080:8080"
+    environment:
+      - USER_SERVICE_URL=http://user-service:8080
+      - PRODUCT_SERVICE_URL=http://product-service:8080
+    networks:
+      - backend
