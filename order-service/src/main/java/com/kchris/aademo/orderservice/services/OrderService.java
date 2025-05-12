@@ -4,11 +4,13 @@ import com.kchris.aademo.orderservice.clients.product.ProductService;
 import com.kchris.aademo.orderservice.clients.users.UserService;
 import com.kchris.aademo.orderservice.controllers.CreateOrderRequest;
 import com.kchris.aademo.orderservice.domain.Order;
+import com.kchris.aademo.orderservice.domain.events.OrderCreatedEvent;
 import com.kchris.aademo.orderservice.enums.OrderStatus;
 import com.kchris.aademo.orderservice.repositories.OrderRepository;
 import java.time.Instant;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,6 +20,7 @@ public class OrderService {
   private final OrderRepository orderRepository;
   private final ProductService productService;
   private final UserService userService;
+  private final KafkaTemplate<String, Object> kafkaTemplate;
 
   public Order createOrder(CreateOrderRequest createOrderRequest) {
     userService.verifyThatUserIsAllowedToOrder(createOrderRequest.userId());
@@ -34,6 +37,7 @@ public class OrderService {
         .build();
 
     orderRepository.insert(order);
+    kafkaTemplate.send("order-created", OrderCreatedEvent.forOrder(order));
     return order;
   }
 

@@ -29,6 +29,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
         <!-- Spring Boot Starter Logging: Default logging configuration for Spring Boot applications -->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
