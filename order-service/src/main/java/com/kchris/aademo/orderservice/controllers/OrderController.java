@@ -2,6 +2,7 @@ package com.kchris.aademo.orderservice.controllers;
 
 import com.kchris.aademo.orderservice.domain.Order;
 import com.kchris.aademo.orderservice.services.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
+@Slf4j
 @RestController
 @RequestMapping("orders")
 public class OrderController {
@@ -24,6 +25,7 @@ public class OrderController {
   @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
   @ResponseStatus(HttpStatus.CREATED)
   public Order createOrder(@RequestBody CreateOrderRequest createOrderRequest) {
+    log.debug("Creating order {}", createOrderRequest);
     return orderService.createOrder(createOrderRequest);
   }
 }

@@ -10,9 +10,11 @@ import com.kchris.aademo.orderservice.repositories.OrderRepository;
 import java.time.Instant;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class OrderService {
@@ -37,6 +39,7 @@ public class OrderService {
         .build();
 
     orderRepository.insert(order);
+    log.debug("Order {} created successfully", order.id());
     kafkaTemplate.send("order-created", OrderCreatedEvent.forOrder(order));
     return order;
   }
