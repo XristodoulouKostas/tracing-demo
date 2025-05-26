@@ -39,7 +39,7 @@ public class OrderService {
         .build();
 
     orderRepository.insert(order);
-    log.debug("Order {} created successfully", order.id());
+    log.info("Order {} created successfully", order.id());
     kafkaTemplate.send("order-created", OrderCreatedEvent.forOrder(order));
     return order;
   }

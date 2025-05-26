@@ -17,7 +17,7 @@ public class UserService {
   }
 
   public void verifyThatUserIsAllowedToOrder(UUID userId) {
-    log.debug("Verifying client {}", userId);
+    log.info("Verifying client {}", userId);
     User user = userClient.get()
         .uri("/users/{id}", userId)
         .retrieve()

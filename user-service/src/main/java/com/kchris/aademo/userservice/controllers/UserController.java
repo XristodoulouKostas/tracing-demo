@@ -24,7 +24,7 @@ public class UserController {
 
   @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<User> getUserById(@PathVariable("id") UUID id) {
-    log.debug("Retrieving user with ID {}", id);
+    log.info("Retrieving user with ID {}", id);
     return userService.getUserById(id)
         .map(ResponseEntity::ok)
         .orElse(ResponseEntity.notFound().build());

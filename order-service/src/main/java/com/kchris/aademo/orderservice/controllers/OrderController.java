@@ -25,7 +25,7 @@ public class OrderController {
   @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
   @ResponseStatus(HttpStatus.CREATED)
   public Order createOrder(@RequestBody CreateOrderRequest createOrderRequest) {
-    log.debug("Creating order {}", createOrderRequest);
+    log.info("Creating order {}", createOrderRequest);
     return orderService.createOrder(createOrderRequest);
   }
 }

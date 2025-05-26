@@ -17,7 +17,7 @@ public class ProductService {
   }
 
   public void verifyThereAreEnoughItems(UUID productId, int quantity) {
-    log.debug("Verifying that there are enough products with id '{}'", productId);
+    log.info("Verifying that there are enough products with id '{}'", productId);
     Product product = productClient.get()
         .uri("/products/{id}", productId)
         .retrieve()

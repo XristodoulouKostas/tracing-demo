@@ -21,7 +21,7 @@ public class ProductController {
 
   @GetMapping("/{id}")
   public ResponseEntity<Product> getProductById(@PathVariable("id") UUID id) {
-    log.debug("Retrieving product with ID '{}'", id);
+    log.info("Retrieving product with ID '{}'", id);
     return service.getProductById(id)
         .map(ResponseEntity::ok)
         .orElse(ResponseEntity.notFound().build());
