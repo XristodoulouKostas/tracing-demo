@@ -19,3 +19,8 @@ external:
     url: ${USER_SERVICE_URL:http://localhost:8081}
   product-service:
     url: ${PRODUCT_SERVICE_URL:http://localhost:8082}
+
+management:
+  tracing:
+    sampling:
+      probability: 1
