@@ -68,7 +68,7 @@
         </executions>
         <configuration>
           <from>
-            <image>openjdk:21-slim</image>
+            <image>amazoncorretto:21-alpine</image>
           </from>
           <to>
             <image>notification-service:latest</image>

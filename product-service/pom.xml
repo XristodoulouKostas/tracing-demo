@@ -61,7 +61,7 @@
         </executions>
         <configuration>
           <from>
-            <image>openjdk:21-slim</image>
+            <image>amazoncorretto:21-alpine</image>
           </from>
           <to>
             <image>product-service:latest</image>
