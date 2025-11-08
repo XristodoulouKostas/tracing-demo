@@ -5,7 +5,15 @@ data='{"userId": "a1b2c3d4-e5f6-11ec-8fea-0242ac120001", "productId": "f1e2d3c4-
 
 for i in {1..10}
 do
-  curl -X POST "$url"        -H "Content-Type: application/json"        -d "$data" &
+  (
+    curl -X POST -i "$url" \
+         -H "Content-Type: application/json" \
+         -d "$data" \
+         -w "\nTotal time for request $i: %{time_total}s\n" \
+         -o /dev/stdout -s
+    echo ""
+    echo ""
+  ) &
 done
 
 wait
