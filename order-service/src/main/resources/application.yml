@@ -4,6 +4,9 @@ server:
 logging:
   level:
     root: INFO
+  pattern:
+    correlation: "[ ${ spring.application.name: },%X{ traceId:- },%X{ spanId:- } ]"
+  include-application-name: false
 
 spring:
   application:
@@ -19,3 +22,11 @@ external:
     url: ${USER_SERVICE_URL:http://localhost:8081}
   product-service:
     url: ${PRODUCT_SERVICE_URL:http://localhost:8082}
+
+management:
+  tracing:
+    sampling:
+      probability: 1
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans

@@ -4,6 +4,9 @@ server:
 logging:
   level:
     root: INFO
+  pattern:
+    correlation: "[ ${ spring.application.name: },%X{ traceId:- },%X{ spanId:- } ]"
+  include-application-name: false
 
 spring:
   application:
@@ -25,3 +28,11 @@ spring:
     console:
       enabled: true
       path: /h2-console
+
+management:
+  tracing:
+    sampling:
+      probability: 1
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
