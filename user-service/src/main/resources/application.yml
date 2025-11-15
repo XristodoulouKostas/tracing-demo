@@ -5,7 +5,7 @@ logging:
   level:
     root: INFO
   pattern:
-    correlation: "[ trace-id: %X{ traceId:- }, span-id: %X{ spanId:- } ]"
+    correlation: "[ %X{ traceId:- }, %X{ spanId:- } ]"
   include-application-name: false
 
 spring:
