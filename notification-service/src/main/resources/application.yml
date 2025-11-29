@@ -5,7 +5,7 @@ logging:
   level:
     root: INFO
   pattern:
-    correlation: "[ %X{ traceId:- }, %X{ spanId:- } ]"
+    correlation: "[ %X{userId:-}, %X{ traceId:- }, %X{ spanId:- } ]"
   include-application-name: false
 
 spring:
@@ -24,6 +24,12 @@ management:
   tracing:
     sampling:
       probability: 1
+    baggage:
+      correlation:
+        fields:
+          - userId # Propagates the baggage to the MDC
+  #      remote-fields:
+  #        - userId Propagates baggage over the network if B3 propagation is used. If W3C propagation is used, then this is not needed.
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
