@@ -19,8 +19,9 @@ public class ProductService {
   private final ArtificialError artificialError = new ArtificialError();
 
   public Optional<Product> getProductById(UUID id) {
-    artificialError.randomlyFailWith(0.1, new RuntimeException("Could not send the notification"));
-    artificialError.randomlyAddDelay(0.1, 10, ChronoUnit.SECONDS);
+    artificialError.randomlyFailWith(0.01,
+        new RuntimeException("Could not connect to the database"));
+    artificialError.randomlyAddDelay(0.05, 10, ChronoUnit.SECONDS);
     return repository.findById(id).map(ProductEntity::toDomain);
   }
 
