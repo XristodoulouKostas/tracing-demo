@@ -29,12 +29,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.kchris.aademo</groupId>
-            <artifactId>common-utilities</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
