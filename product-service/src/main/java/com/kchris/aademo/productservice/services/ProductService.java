@@ -19,9 +19,8 @@ public class ProductService {
   private final ArtificialError artificialError = new ArtificialError();
 
   public Optional<Product> getProductById(UUID id) {
-    artificialError.randomlyFailWith(0.01,
-        new RuntimeException("Could not connect to the database"));
-    artificialError.randomlyAddDelay(0.05, 10, ChronoUnit.SECONDS);
+    artificialError.randomlyAddDelay(0.05, 5, ChronoUnit.SECONDS);
+    artificialError.randomlyFailWith(0.2, "Could not retrieve products from DB");
     return repository.findById(id).map(ProductEntity::toDomain);
   }
 

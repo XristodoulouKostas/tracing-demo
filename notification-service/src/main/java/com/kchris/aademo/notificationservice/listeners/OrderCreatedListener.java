@@ -17,7 +17,6 @@ public class OrderCreatedListener {
   @KafkaListener(topics = "order-created", groupId = "notification-service-group", containerFactory = "kafkaListenerContainerFactory")
   public void handleOrderCreated(Message<OrderCreatedEvent> message) {
     log.info("Message headers: {}", message.getHeaders());
-    artificialError.randomlyFailWith(0.1, new RuntimeException("Could not send the notification"));
     artificialError.randomlyAddDelay(0.3, 10, ChronoUnit.SECONDS);
     log.info("Notification sent for order: " + message.getPayload());
   }
