@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.kchris.aademo</groupId>
         <artifactId>tracing-demo</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
 
     <artifactId>notification-service</artifactId>
@@ -94,7 +94,7 @@
                         <image>amazoncorretto:21-alpine</image>
                     </from>
                     <to>
-                        <image>notification-service:latest</image>
+                        <image>notification-service:${project.parent.version}</image>
                     </to>
                     <container>
                         <ports>
