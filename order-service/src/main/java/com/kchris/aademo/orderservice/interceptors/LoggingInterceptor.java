@@ -13,7 +13,7 @@ public class LoggingInterceptor implements HandlerInterceptor {
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     String traceId = MDC.get("traceId");
     if (traceId != null) {
-      response.addHeader("Correlation-Id", traceId);
+      response.addHeader("X-TraceId-Id", traceId);
     }
     return true;
   }
