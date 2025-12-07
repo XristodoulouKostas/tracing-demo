@@ -24,21 +24,21 @@ services:
       - backend
 
   user-service:
-    image: user-service:latest
+    image: user-service:${APP_VERSION}
     build:
       context: ./user-service
     networks:
       - backend
 
   product-service:
-    image: product-service:latest
+    image: product-service:${APP_VERSION}
     build:
       context: ./product-service
     networks:
       - backend
 
   order-service:
-    image: order-service:latest
+    image: order-service:${APP_VERSION}
     build:
       context: ./order-service
     ports:
@@ -51,7 +51,7 @@ services:
       - backend
 
   notification-service:
-    image: notification-service:latest
+    image: notification-service:${APP_VERSION}
     build:
       context: ./notification-service
     environment:

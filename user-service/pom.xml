@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.kchris.aademo</groupId>
     <artifactId>tracing-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
 
   <artifactId>user-service</artifactId>
@@ -83,7 +83,7 @@
             <image>amazoncorretto:21-alpine</image>
           </from>
           <to>
-            <image>user-service:latest</image>
+            <image>user-service:${project.parent.version}</image>
           </to>
           <container>
             <ports>
