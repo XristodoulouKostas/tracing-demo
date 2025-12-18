@@ -15,7 +15,6 @@ public class KafkaConfig {
   public KafkaTemplate<String, Object> kafkaTemplate(ProducerFactory<String, Object> pf) {
     var kafkaTemplate = new KafkaTemplate<>(pf);
     kafkaTemplate.setObservationEnabled(true);
-    // TODO Check what this does.
     kafkaTemplate.setObservationConvention(new KafkaTemplateObservationConvention() {
       @Override
       public KeyValues getLowCardinalityKeyValues(KafkaRecordSenderContext context) {
